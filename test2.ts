@@ -1,11 +1,29 @@
 // Add your code here
-class User {
-    name:string;
-    age:number;
+class LedBlinker {
+    delay: number;
 
-    constructor(name:string, age:number) {
-        this.name = name;
-        this.age = age;
+    constructor(delay: number) {
+        this.delay = delay;
+    }
+    blink() {
+        while (true) {
+            basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . . . .
+            `)
+            basic.pause(this.delay)
+            basic.showLeds(`
+            # . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+            basic.pause(this.delay)
+        }
     }
 
 }
