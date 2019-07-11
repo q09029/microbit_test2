@@ -5,5 +5,6 @@ namespace comment {
     }
     //% blockId=show_strings2 block="コメント2 %v"
     export function noaction2(text: string): void {
+        let taro = new User('太郎', 32);
     }
 }
